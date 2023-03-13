@@ -20,7 +20,7 @@ class CoffeeType extends StatelessWidget {
             style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: isselected ? Colors.orange[800] : Colors.white)),
+                color: isselected ? Color.fromARGB(207, 196, 101, 24) : Colors.white)),
       ),
     );
   }

@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class CoffeeTile extends StatelessWidget {
   final String coffeeImagePath;
   final String coffeeName;
+  final String coffeeSubtitle;
   final String coffeePrice;
 
   CoffeeTile(
       {required this.coffeeImagePath,
       required this.coffeeName,
+      required this.coffeeSubtitle,
       required this.coffeePrice});
 
   @override
@@ -15,7 +17,6 @@ class CoffeeTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 25.0, right: 5.0, bottom: 30),
       child: Container(
-        height: 300,
         padding: EdgeInsets.all(12),
         width: 200,
         decoration: BoxDecoration(
@@ -40,7 +41,7 @@ class CoffeeTile extends StatelessWidget {
                 children: [
                   Text(coffeeName, style: TextStyle(fontSize: 20)),
                   SizedBox(height: 3),
-                  Text('With Almond Milk',
+                  Text(coffeeSubtitle,
                       style: TextStyle(color: Colors.grey[600])),
                 ],
               ),
@@ -59,7 +60,7 @@ class CoffeeTile extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
-                        color: Colors.orange[800],
+                        color: Color.fromARGB(207, 196, 101, 24),
                         borderRadius: BorderRadius.circular(6)),
                     child: Icon(Icons.add),
                   )

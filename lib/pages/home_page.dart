@@ -62,7 +62,13 @@ class _HomepageState extends State<Homepage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.home,
+            color: Color.fromARGB(207, 196, 101, 24),
+          ),
+          label: '',
+        ),
         BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ''),
         BottomNavigationBarItem(
             icon: Icon(Icons.shopping_bag_rounded), label: ''),
@@ -108,32 +114,39 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
 
-        Expanded(
-            child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
-            CoffeeTile(
-              coffeeImagePath: 'asset/images/cappuccino.jpg',
-              coffeeName: 'Cappuccino',
-              coffeePrice: '99',
-            ),
-            CoffeeTile(
-              coffeeImagePath: 'asset/images/espresso.jpg',
-              coffeeName: 'Espresso',
-              coffeePrice: '150',
-            ),
-            CoffeeTile(
-              coffeeImagePath: 'asset/images/ice_coffee.jpg',
-              coffeeName: 'Ice Coffee',
-              coffeePrice: '130',
-            ),
-            CoffeeTile(
-              coffeeImagePath: 'asset/images/latte.jpg',
-              coffeeName: 'Latte',
-              coffeePrice: '160',
-            ),
-          ],
-        )),
+        Container(
+          height: 420,
+          child: Expanded(
+              child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              CoffeeTile(
+                coffeeImagePath: 'asset/images/cappuccino.jpg',
+                coffeeName: 'Cappuccino',
+                coffeeSubtitle: 'With Almond Milk',
+                coffeePrice: '99',
+              ),
+              CoffeeTile(
+                coffeeImagePath: 'asset/images/espresso.jpg',
+                coffeeName: 'Espresso',
+                coffeeSubtitle: 'Made by Arabica beans',
+                coffeePrice: '150',
+              ),
+              CoffeeTile(
+                coffeeImagePath: 'asset/images/ice_coffee.jpg',
+                coffeeName: 'Ice Coffee',
+                coffeeSubtitle: 'With Vanilla Cream',
+                coffeePrice: '130',
+              ),
+              CoffeeTile(
+                coffeeImagePath: 'asset/images/latte.jpg',
+                coffeeName: 'Latte',
+                coffeeSubtitle: 'With Low Sugar',
+                coffeePrice: '160',
+              ),
+            ],
+          )),
+        ),
       ]),
     );
   }
